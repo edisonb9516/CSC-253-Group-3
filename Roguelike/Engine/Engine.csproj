@@ -41,17 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Attack.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\HelpFile.cs" />
+    <Compile Include="Commands\Movement.cs" />
+    <Compile Include="Core\Items,Inventory\Items.cs" />
+    <Compile Include="Core\Items,Inventory\Potion.cs" />
+    <Compile Include="Core\Items,Inventory\Treasure.cs" />
+    <Compile Include="Core\Items,Inventory\Weapon.cs" />
+    <Compile Include="Core\ListBuilder.cs" />
     <Compile Include="Core\Location\Room.cs" />
+    <Compile Include="Core\NPC\Mob.cs" />
+    <Compile Include="Core\Player\Player.cs" />
+    <Compile Include="Core\StandardMessages.cs" />
+    <Compile Include="Create,Save,Load\CreatePlayer.cs" />
+    <Compile Include="Create,Save,Load\DetermineNewPlayer.cs" />
+    <Compile Include="Create,Save,Load\Intoduction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
-    <Folder Include="Commands\" />
     <Folder Include="Core\Combat\" />
-    <Folder Include="Core\Items,Inventory\" />
-    <Folder Include="Core\NPC\" />
-    <Folder Include="Core\Player\" />
-    <Folder Include="Create,Save,Load\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Rooms.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

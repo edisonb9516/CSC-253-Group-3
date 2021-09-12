@@ -1,0 +1,9 @@
+﻿201
+Entrance
+A dark room with only one way in or out.
+1
+0
+0
+0
+0
+0
