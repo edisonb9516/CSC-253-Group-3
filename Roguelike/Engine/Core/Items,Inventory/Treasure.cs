@@ -25,7 +25,6 @@ namespace Engine.Core.Items_Inventory
         public int Value { get; }
 
 
-        // TODO add treasure
         //public int Gold { get; set; }
         //public int Silver { get; set; }
         //public string SilverBroach { get; set; }

@@ -18,8 +18,6 @@ namespace Engine.Core.Items_Inventory
             Description = description;
             Value = value;
         }
-
-        // TODO potions
         //public int HealthPotion { get; set; }
         //public int ManaPotion { get; set; }
         //public int IncDamagePotion { get; set; }

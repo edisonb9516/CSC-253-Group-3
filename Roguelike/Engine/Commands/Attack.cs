@@ -8,7 +8,7 @@ namespace Engine.Commands
 {
     public class Attack
     {
-        // TODO actual combat rolls
+        // TODO actual combat
         public static int AttackDamage()
         {
             int damage;

@@ -21,7 +21,6 @@ namespace Engine.Core.Items_Inventory
         public int Id { get; }
         public string Name { get; }
         public string Description { get; }
-        // TODO add items
 
     }
 }

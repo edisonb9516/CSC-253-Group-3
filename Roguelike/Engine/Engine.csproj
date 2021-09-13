@@ -43,13 +43,14 @@
   <ItemGroup>
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="Commands\HelpFile.cs" />
+    <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Movement.cs" />
     <Compile Include="Core\Items,Inventory\Items.cs" />
     <Compile Include="Core\Items,Inventory\Potion.cs" />
     <Compile Include="Core\Items,Inventory\Treasure.cs" />
     <Compile Include="Core\Items,Inventory\Weapon.cs" />
     <Compile Include="Core\ListBuilder.cs" />
+    <Compile Include="Core\Location\CurrentLocation.cs" />
     <Compile Include="Core\Location\Room.cs" />
     <Compile Include="Core\NPC\Mob.cs" />
     <Compile Include="Core\Player\Player.cs" />

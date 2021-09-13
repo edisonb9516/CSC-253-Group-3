@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Core.Location;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,62 @@ namespace Engine.Commands
 {
     public class Movement
     {
-        // TODO Figure out movement for moving nsew between rooms, maybe room.northExit > 0 as the condition then handle movement with the next room id?
-        public static string Move(string direction)
+        // since this is a void method need a static variable to determine output if cant move
+        public static bool cantGo = false;
+        public static void Move(string direction)
         {
             switch (direction)
             {
                 case "north":
-                    return "We Tried";
-                default:
-                    return "Something went wrong";
+                    if (Core.Player.Player.CurrentRoom.NorthExit != -1)
+                    {
+                        cantGo = false;
+                        MoveRooms(Room.rooms[Core.Player.Player.CurrentRoom.NorthExit]);
+                    }
+                    else
+                    {
+                        cantGo = true;
+                    }
+                    break;
+                case "south":
+                    if (Core.Player.Player.CurrentRoom.SouthExit != -1)
+                    {
+                        cantGo = false;
+                        MoveRooms(Room.rooms[Core.Player.Player.CurrentRoom.SouthExit]);
+                    }
+                    else
+                    {
+                        cantGo = true;
+                    }
+                    break;
+                case "east":
+                    if (Core.Player.Player.CurrentRoom.EastExit != -1)
+                    {
+                        cantGo = false;
+                        MoveRooms(Room.rooms[Core.Player.Player.CurrentRoom.EastExit]);
+                    }
+                    else
+                    {
+                        cantGo = true;
+                    }
+                    break;
+                case "west":
+                    if (Core.Player.Player.CurrentRoom.WestExit != -1)
+                    {
+                        cantGo = false;
+                        MoveRooms(Room.rooms[Core.Player.Player.CurrentRoom.WestExit]);
+                    }
+                    else
+                    {
+                        cantGo = true;
+                    }
+                    break;
             }
+        }
+
+        private static void MoveRooms(Room room)
+        {
+            Core.Player.Player.CurrentRoom = room;
         }
     }
 }

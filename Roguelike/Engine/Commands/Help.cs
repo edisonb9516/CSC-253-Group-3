@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Commands
 {
-    public class HelpFile
+    public class Help
     {
         public static void DisplayHelpInfo()
         {
@@ -27,6 +27,7 @@ namespace Engine.Commands
             Console.WriteLine("Potions - Displays Potions             ");
             Console.WriteLine("Enemies - Displays Enemies             ");
             Console.WriteLine("Treasure - Displays Treasure           ");
+            Console.WriteLine("Location - Displays Current Location   ");
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;

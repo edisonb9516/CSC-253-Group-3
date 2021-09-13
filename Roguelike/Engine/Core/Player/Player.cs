@@ -15,6 +15,8 @@ namespace Engine.Core.Player
         public string Class { get; set; }
         public string Race { get; set; }
         public int Hp { get; set; }
+        public int CurrentHP { get; set; }
+        public static Location.Room CurrentRoom { get; set; }
 
         // will require all properties so no base default constructor
         public Player(string name, string password, string classType, string race, int hp)
@@ -24,6 +26,11 @@ namespace Engine.Core.Player
             Class = classType;
             Race = race;
             Hp = hp;
+            // current hp is equal to starting hp
+            CurrentHP = hp;
+            // current location is first Room in rooms list when generated
+            CurrentRoom = Location.Room.rooms[0];
+            // will probably handle weapons and other equip / inventory items in a similar way as the location
         }
 
         // Holds player objects in list currently this will later be held in a database or document.

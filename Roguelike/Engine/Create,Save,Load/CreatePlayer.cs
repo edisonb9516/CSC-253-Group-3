@@ -109,7 +109,7 @@ namespace Engine.Create_Save_Load
                 }
 
             }
-
+            // TODO add to database that generates this list instead
             Core.Player.Player.players.Add(new Core.Player.Player(name, password, classType, race, hp));
         }
     }

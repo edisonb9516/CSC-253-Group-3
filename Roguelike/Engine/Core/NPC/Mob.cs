@@ -26,7 +26,6 @@ namespace Engine.Core.NPC
         public int Hp { get; }
         public int Damage { get; }
 
-        // TODO add enemy class then read from text file and create by passing input from text to here. Done in the listbuilder class
 
     }
 }

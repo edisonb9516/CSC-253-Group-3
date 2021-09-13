@@ -5,6 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Engine;
 
+/**
+* 9/12/2021
+* CSC 253
+* Kevin Griffin, Brandon Edison, Adrian Gorum
+* Start of the project, repurposing classes and methods from the fist semesters' project and building onto it with new classes and features
+*/
+
 namespace ConsoleUI
 {
     class Program
@@ -21,7 +28,6 @@ namespace ConsoleUI
 
             while(Engine.Commands.Command.exit == false)
             {
-                Engine.Core.StandardMessages.DisplayLocation();
                 Engine.Core.StandardMessages.DisplayMenu();
 
                 string input = Console.ReadLine();

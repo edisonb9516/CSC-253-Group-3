@@ -22,7 +22,7 @@ namespace Engine.Commands
 
                     break;
 
-                case "spells":
+                case "weapons":
                     Core.StandardMessages.ViewAfterChoice("Weapons");
                     foreach (Core.Items_Inventory.Weapon weapon in Core.Items_Inventory.Weapon.weapons)
                     {
@@ -38,7 +38,7 @@ namespace Engine.Commands
                     }
                     break;
 
-                case "money":
+                case "treasure":
                     Core.StandardMessages.ViewAfterChoice("Treasure");
                     foreach (Core.Items_Inventory.Treasure treasure in Core.Items_Inventory.Treasure.treasures)
                     {
@@ -63,37 +63,56 @@ namespace Engine.Commands
                     break;
 
                 case "north":
-                    string outputNorth = Movement.Move("north");
-                    Console.WriteLine(outputNorth);
+                case "n":
+                    Movement.Move("north");
+                    Core.StandardMessages.DisplayLocation();
+                    if (Movement.cantGo == true)
+                    {
+                        Console.WriteLine("You can't go north");
+                    }
                     break;
-
                 case "south":
-                    string outputSouth = Movement.Move("south");
-                    Console.WriteLine(outputSouth);
+                case "s":
+                    Movement.Move("south");
+                    Core.StandardMessages.DisplayLocation();
+                    if (Movement.cantGo == true)
+                    {
+                        Console.WriteLine("You can't go south");
+                    }
                     break;
-
                 case "east":
-                    string outputEast = Movement.Move("east");
-                    Console.WriteLine(outputEast);
+                case "e":
+                    Movement.Move("east");
+                    Core.StandardMessages.DisplayLocation();
+                    if (Movement.cantGo == true)
+                    {
+                        Console.WriteLine("You can't go east");
+                    }
                     break;
-
                 case "west":
-                    string outputWest = Movement.Move("west");
-                    Console.WriteLine(outputWest);
+                case "w":
+                    Movement.Move("west");
+                    Core.StandardMessages.DisplayLocation();
+                    if (Movement.cantGo == true)
+                    {
+                        Console.WriteLine("You can't go west");
+                    }
                     break;
-
                 case "attack":
                     // TODO  actual damage
                     int damage = Attack.AttackDamage();
                     Console.WriteLine($"Damage Dealt to enemy : {damage}");
                     break;
                 case "help":
-                    HelpFile.DisplayHelpInfo();
+                    Help.DisplayHelpInfo();
                     break;
                 case "exit":
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Exiting!");
                     exit = true;
+                    break;
+                case "location":
+                    Core.StandardMessages.DisplayLocation();
                     break;
                 default:
                     Core.StandardMessages.ChoiceError();

@@ -19,7 +19,6 @@ namespace Engine.Core.Items_Inventory
             Damage = damage;
         }
 
-        // TODO Weapons
         //public string BroadSword { get; set; }
         //public string Claymore { get; set; }
         //public string MorningStar { get; set; }

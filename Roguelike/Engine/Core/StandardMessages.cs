@@ -41,7 +41,7 @@ namespace Engine.Core
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("________________________________________________________________________________________________________________________");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            // TODO fix this by getting current room id then displaying name  -------- Location.CurrentLocation.DisplayCurrentLocation();
+            Location.CurrentLocation.DisplayCurrentLocation();
         }
         public static void BreakApartDisplay()
         {
