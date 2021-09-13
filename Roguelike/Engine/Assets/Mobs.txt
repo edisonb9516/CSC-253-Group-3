@@ -1,0 +1,5 @@
+﻿301
+Goblin
+Small but nasty creature who attacks all travelers
+80
+10
