@@ -16,30 +16,19 @@ namespace Engine.Core
 
             #region Build Rooms
 
-            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Rooms.txt"))
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Rooms.csv"))
             {
+                reader.ReadLine();
+
                 while (!reader.EndOfStream)
                 {
-                    int id = int.Parse(reader.ReadLine());
+                    string[] tokens = reader.ReadLine().Split(',');
 
-                    string name = reader.ReadLine();
-
-                    string description = reader.ReadLine();
-
-                    int northExit = int.Parse(reader.ReadLine());
-
-                    int southExit = int.Parse(reader.ReadLine());
-
-                    int eastExit = int.Parse(reader.ReadLine());
-
-                    int westExit = int.Parse(reader.ReadLine());
-
-                    int monsterId = int.Parse(reader.ReadLine());
-
-                    int itemID = int.Parse(reader.ReadLine());
-
-                    Location.Room.rooms.Add(new Location.Room(id, name, description, northExit, southExit, eastExit, westExit, monsterId, itemID));
+                    Location.Room.rooms.Add(new Location.Room(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]),
+                        int.Parse(tokens[6]), int.Parse(tokens[7]), int.Parse(tokens[8])));
                 }
+                reader.Close();
+
             }
             #endregion
 
@@ -78,12 +67,14 @@ namespace Engine.Core
             #region Build Mobs
             using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
             {
+                reader.ReadLine();
                 while (!reader.EndOfStream)
                 {
                     string[] tokens = reader.ReadLine().Split(',');
 
                     NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4])));
                 }
+                reader.Close();
             }
                     #endregion
         }

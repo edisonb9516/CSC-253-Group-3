@@ -64,8 +64,8 @@
     <Folder Include="Core\Combat\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Rooms.txt" />
-    <Content Include="Assets\Mobs.txt" />
+    <None Include="Assets\Rooms.csv" />
+    <None Include="Assets\Mobs.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
