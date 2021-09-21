@@ -76,21 +76,13 @@ namespace Engine.Core
             #endregion
 
             #region Build Mobs
-            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.txt"))
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
             {
                 while (!reader.EndOfStream)
                 {
-                    int id = int.Parse(reader.ReadLine());
+                    string[] tokens = reader.ReadLine().Split(',');
 
-                    string name = reader.ReadLine();
-
-                    string description = reader.ReadLine();
-
-                    int hp = int.Parse(reader.ReadLine());
-
-                    int damage = int.Parse(reader.ReadLine());
-
-                    NPC.Mob.mobs.Add(new NPC.Mob(id, name, description, hp, damage));
+                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4])));
                 }
             }
                     #endregion
