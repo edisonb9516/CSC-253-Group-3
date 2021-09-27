@@ -11,13 +11,14 @@ namespace Engine.Core.NPC
         // List
         public static List<Mob> mobs = new List<Mob>();
 
-        public Mob(int id, string name, string description, int hp, int damage)
+        public Mob(int id, string name, string description, int hp, int damage, int gold)
         {
             Id = id;
             Name = name;
             Description = description;
             Hp = hp;
             Damage = damage;
+            Gold = gold;
         }
 
         public int Id { get; }
@@ -25,6 +26,7 @@ namespace Engine.Core.NPC
         public string Description { get; }
         public int Hp { get; }
         public int Damage { get; }
+        public int Gold { get; }
 
 
     }

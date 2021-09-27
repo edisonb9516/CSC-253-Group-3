@@ -11,18 +11,20 @@ namespace Engine.Core.Items_Inventory
         // List
         public static List<Treasure> treasures = new List<Treasure>();
 
-        public Treasure(int id, string name, string description, int value)
+        public Treasure(int id, string name, string description, int value, int quest)
         {
             Id = id;
             Name = name;
             Description = description;
             Value = value;
+            Quest = quest;
         }
 
         public int Id { get; }
         public string Name { get; }
         public string Description { get; }
         public int Value { get; }
+        public int Quest { get; }
 
 
         //public int Gold { get; set; }

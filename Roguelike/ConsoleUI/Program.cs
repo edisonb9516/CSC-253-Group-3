@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Engine;
 
 /**
-* 9/12/2021
+* 9/26/2021
 * CSC 253
 * Kevin Griffin, Brandon Edison, Adrian Gorum
-* Start of the project, repurposing classes and methods from the fist semesters' project and building onto it with new classes and features
+* Read objects from files and save player information to be searched and loaded, combat, and other things
 */
 
 namespace ConsoleUI
@@ -18,7 +18,6 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            // TODO Build Lists -- finishing this is where most of our work is done in sprint 1
             Engine.Core.ListBuilder.Build();
 
             // Welcome screen and player loading
@@ -44,6 +43,9 @@ namespace ConsoleUI
 
                 Engine.Commands.Command.CommandSelection(input);
             }
+            // TODO create a search function for everything other than player that searches by id and returns objects
+
+            // TODO save player object to file before exiting
         }
     }
 }

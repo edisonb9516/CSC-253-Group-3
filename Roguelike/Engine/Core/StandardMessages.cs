@@ -38,6 +38,7 @@ namespace Engine.Core
 
         public static void DisplayLocation()
         {
+            // TODO show exit options in location
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("________________________________________________________________________________________________________________________");
             Console.ForegroundColor = ConsoleColor.Cyan;

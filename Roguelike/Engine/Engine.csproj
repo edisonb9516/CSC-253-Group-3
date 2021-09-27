@@ -58,12 +58,18 @@
     <Compile Include="Create,Save,Load\CreatePlayer.cs" />
     <Compile Include="Create,Save,Load\DetermineNewPlayer.cs" />
     <Compile Include="Create,Save,Load\Intoduction.cs" />
+    <Compile Include="Create,Save,Load\Load.cs" />
+    <Compile Include="Create,Save,Load\Save.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Combat\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Items.csv" />
+    <None Include="Assets\Potions.csv" />
+    <None Include="Assets\Treasure.csv" />
+    <None Include="Assets\Weapons.csv" />
     <None Include="Assets\Rooms.csv" />
     <None Include="Assets\Mobs.csv" />
   </ItemGroup>

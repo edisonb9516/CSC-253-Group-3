@@ -11,12 +11,13 @@ namespace Engine.Core.Items_Inventory
         // List
         public static List<Weapon> weapons = new List<Weapon>();
 
-        public Weapon(int id, string name, string decription, int damage)
+        public Weapon(int id, string name, string decription, int damage, int price)
         {
             Id = id;
             Name = name;
             Description = decription;
             Damage = damage;
+            Price = price;
         }
 
         //public string BroadSword { get; set; }
@@ -29,5 +30,6 @@ namespace Engine.Core.Items_Inventory
         public string Name { get; }
         public string Description { get; }
         public int Damage { get; }
+        public int Price { get; }
     }
 }

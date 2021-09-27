@@ -32,9 +32,10 @@ namespace Engine.Core.Player
             CurrentRoom = Location.Room.rooms[0];
             // will probably handle weapons and other equip / inventory items in a similar way as the location
         }
+        // TODO new overloaded constructor that accepts Room Location as a parameter to build from a save
+
 
         // Holds player objects in list currently this will later be held in a database or document.
-
         public static List<Player> players = new List<Player>();
 
     }

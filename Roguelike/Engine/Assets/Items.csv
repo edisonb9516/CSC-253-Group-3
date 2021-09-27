@@ -1,0 +1,9 @@
+﻿ID,Name,Description,Price,Quest
+501,Torch,Can light up a dark room,5,1
+502,Key,Can open some door somewhere,10,1
+503,Locket,Inside is a picture of a King - Queen - and Princess,20,0
+504,Shirt,This shirt has fresh blood on it. Who did it belong to?,1,0
+505,Biscuit,Food Item many people need this,5,0
+506,Cup of Water,Necessary for people to live,5,0
+507,Fang,Fang of some beast,2,0
+508,Paper,Peice of paper,1,0

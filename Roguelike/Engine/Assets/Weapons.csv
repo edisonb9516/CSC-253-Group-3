@@ -1,0 +1,5 @@
+﻿ID,Name,Description,Attack,Price,Modifier?
+801,Broadsword,Normal sized sword with normal sized damage,30,50
+802,Claymore,Huge sword does a lot of damage,50,80
+803,Daggers,Small daggers lets you move faster while attacking,25,75
+804,Dragonslayer Bow,Well crafted bow that keeps you farther away from combat,25,125

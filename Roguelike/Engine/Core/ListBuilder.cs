@@ -12,7 +12,6 @@ namespace Engine.Core
 
         public static void Build()
         {
-            // TODO build lists here reading from .txt files and building to object lists
 
             #region Build Rooms
 
@@ -34,37 +33,78 @@ namespace Engine.Core
 
             #region Build Items
 
-            // TODO read from file instead of hard coding
-            Items_Inventory.Items.items.Add(new Items_Inventory.Items(501, "Torch", "Can light up a dark room"));
-            Items_Inventory.Items.items.Add(new Items_Inventory.Items(502, "Key", "Can open some door somewhere"));
-            Items_Inventory.Items.items.Add(new Items_Inventory.Items(503, "Locket", "Inside is a picture of a King, Queen, and Princess"));
-            Items_Inventory.Items.items.Add(new Items_Inventory.Items(504, "Shirt", "This shirt has fresh blood on it. Who did it belong to?"));
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Items.csv"))
+            {
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    string[] tokens = reader.ReadLine().Split(',');
+
+                    Items_Inventory.Items.items.Add(new Items_Inventory.Items(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4])));
+                }
+                reader.Close();
+
+            }
             #endregion
 
             #region Build Potions
 
-            // TODO read from file instead of hard coding
-            Items_Inventory.Potion.potions.Add(new Items_Inventory.Potion(601, "Small Health Potion", "Heals A small amount of HP (25).", 25));
-            Items_Inventory.Potion.potions.Add(new Items_Inventory.Potion(602, "Large Health Potion", "Heals A large amount of HP (75).", 75));
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Potions.csv"))
+            {
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    string[] tokens = reader.ReadLine().Split(',');
+
+                    Items_Inventory.Potion.potions.Add(new Items_Inventory.Potion(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3])));
+                }
+                reader.Close();
+
+            }
             #endregion
 
             #region Build Treasure
-            // TODO read from file instead of hard coding
-            Items_Inventory.Treasure.treasures.Add(new Items_Inventory.Treasure(701, "Diamond", "Small diamond worth a lot of gold", 200));
-            Items_Inventory.Treasure.treasures.Add(new Items_Inventory.Treasure(702, "Crystal Orb", "Sphere of crystal, worth a lot of gold to the right buyer", 100));
-            Items_Inventory.Treasure.treasures.Add(new Items_Inventory.Treasure(703, "Music Box", "Someone treasured this music box in the past. Maybe they will reward you if you can find them", 100));
+
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Treasure.csv"))
+            {
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    string[] tokens = reader.ReadLine().Split(',');
+
+                    Items_Inventory.Treasure.treasures.Add(new Items_Inventory.Treasure(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4])));
+                }
+                reader.Close();
+
+            }
             #endregion
 
             #region Build Weapons
+            // TODO add more weapons to weapons.csv for a total of 12
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Weapons.csv"))
+            {
+                reader.ReadLine();
 
-            // TODO read from file instead of hard coding
-            Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(801, "Broadsword", "Normal sized sword with normal sized damage", 30));
-            Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(802, "Claymore", "Huge sword does a lot of damage", 50));     // movement speed * .67
-            Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(803, "Daggers", "Small daggers lets you move faster while attacking", 25));       // movement speed * 1.5
-            Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(804, "Dragonslayer Bow", "Well crafted bow that keeps you farther away from combat", 25));        // evasion * 2
+                while (!reader.EndOfStream)
+                {
+                    string[] tokens = reader.ReadLine().Split(',');
+
+                    Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4])));
+                }
+                reader.Close();
+
+            }
+            //Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(801, "Broadsword", "Normal sized sword with normal sized damage", 30));
+            //Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(802, "Claymore", "Huge sword does a lot of damage", 50));     // movement speed * .67
+            //Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(803, "Daggers", "Small daggers lets you move faster while attacking", 25));       // movement speed * 1.5
+            //Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(804, "Dragonslayer Bow", "Well crafted bow that keeps you farther away from combat", 25));        // evasion * 2
             #endregion
 
             #region Build Mobs
+            // TODO add more mobs to mobs.csv for a total of 15
             using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
             {
                 reader.ReadLine();
@@ -72,7 +112,7 @@ namespace Engine.Core
                 {
                     string[] tokens = reader.ReadLine().Split(',');
 
-                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4])));
+                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5])));
                 }
                 reader.Close();
             }

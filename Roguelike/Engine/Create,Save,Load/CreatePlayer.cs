@@ -104,12 +104,11 @@ namespace Engine.Create_Save_Load
                 }
                 else
                 {
-                    Console.WriteLine("Your password did not meet requirements");
+                    Console.WriteLine("Your password did not meet requirements.");
                     Core.StandardMessages.BreakApartDisplay();
                 }
 
             }
-            // TODO add to database that generates this list instead
             Core.Player.Player.players.Add(new Core.Player.Player(name, password, classType, race, hp));
         }
     }
