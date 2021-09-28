@@ -11,6 +11,7 @@ namespace Engine.Core.Location
         // List of rooms
         public static List<Room> rooms = new List<Room>();
 
+        // TODO Replace monsterId with actual Mob Object then later save as ID instead
         public Room(int id, string name, string description, int northExit, int southExit, int eastExit, int westExit, int monsterId, int itemID)
         {
             Id = id;

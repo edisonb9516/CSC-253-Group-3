@@ -17,6 +17,8 @@ namespace Engine.Create_Save_Load
             string race = "";
             string password = "";
             int hp = 0;
+            int evasion = 0;
+            int attack = 0;
             bool stopClass = false;
             bool stopRace = false;
             bool stopPassword = false;
@@ -64,15 +66,17 @@ namespace Engine.Create_Save_Load
 
                 if (classType == "warrior")
                 {
-                    // TODO: special attributes for each class
+                    attack = 20;
                     stopClass = true;
                 }
                 else if (classType == "rogue")
                 {
+                    attack = 15;
                     stopClass = true;
                 }
                 else if (classType == "wizard")
                 {
+                    attack = 10;
                     stopClass = true;
                 }
                 else
@@ -95,17 +99,19 @@ namespace Engine.Create_Save_Load
                 if (race == "human")
                 {
                     hp = 120;
+                    evasion = 15;
                     stopRace = true;
                 }
                 else if (race == "dragonborn")
                 {
                     hp = 150;
+                    evasion = 5;
                     stopRace = true;
                 }
                 else if (race == "elf")
                 {
-                    // TODO: maybe add evasion? Else why ever choose anything other than dragonborn
                     hp = 100;
+                    evasion = 25;
                     stopRace = true;
                 }
                 else
@@ -134,7 +140,7 @@ namespace Engine.Create_Save_Load
                 }
 
             }
-            Core.Player.Player.players.Add(new Core.Player.Player(name, password, classType, race, hp));
+            Core.Player.Player.players.Add(new Core.Player.Player(name, password, classType, race, hp, evasion, attack));
         }
     }
 }

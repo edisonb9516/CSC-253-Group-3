@@ -10,6 +10,8 @@ namespace Engine.Core.Items_Inventory
     {
         // List
         public static List<Weapon> weapons = new List<Weapon>();
+        // TODO add evasion modifier as a parameter some weapons like daggers and bows have a high evasion modifiers while others might have zero like claymore. This should be an integer that will add
+        // to player evasion which will then be calculated in combat
 
         public Weapon(int id, string name, string decription, int damage, int price)
         {
@@ -20,12 +22,6 @@ namespace Engine.Core.Items_Inventory
             Price = price;
         }
 
-        //public string BroadSword { get; set; }
-        //public string Claymore { get; set; }
-        //public string MorningStar { get; set; }
-        //public string GoldenStaff { get; set; }
-        //public string DragonslayerBow { get; set; }
-        //public string Daggers { get; set; }
         public int Id { get; }
         public string Name { get; }
         public string Description { get; }

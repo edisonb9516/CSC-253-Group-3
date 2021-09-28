@@ -1,2 +1,2 @@
-Name,Password,Class,Race,HP,CurrentHP,RoomID
-Kevin,Keving97!,rogue,dragonborn,150,150,1
+Name,Password,Class,Race,HP,CurrentHP,RoomID,Evasion,Attack
+Kevin,Keving97!,rogue,dragonborn,150,150,1,15,15

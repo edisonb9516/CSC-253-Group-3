@@ -45,6 +45,7 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Movement.cs" />
+    <Compile Include="Core\Combat\Combat.cs" />
     <Compile Include="Core\Items,Inventory\Items.cs" />
     <Compile Include="Core\Items,Inventory\Potion.cs" />
     <Compile Include="Core\Items,Inventory\Treasure.cs" />
@@ -62,9 +63,7 @@
     <Compile Include="Create,Save,Load\Save.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\Combat\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Assets\Items.csv" />
     <None Include="Assets\Potions.csv" />

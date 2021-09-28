@@ -112,7 +112,7 @@ namespace Engine.Core
                 {
                     string[] tokens = reader.ReadLine().Split(',');
 
-                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5])));
+                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6])));
                 }
                 reader.Close();
             }
