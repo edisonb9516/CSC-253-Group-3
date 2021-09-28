@@ -45,7 +45,8 @@ namespace ConsoleUI
             }
             // TODO create a search function for everything other than player that searches by id and returns objects
 
-            // TODO save player object to file before exiting
+            Console.WriteLine(Engine.Create_Save_Load.Save.SavePlayer());
+            Console.ReadLine();
         }
     }
 }

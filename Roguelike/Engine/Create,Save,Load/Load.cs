@@ -8,6 +8,18 @@ namespace Engine.Create_Save_Load
 {
     public static class Load
     {
-        // TODO Create method to search and create a player based on the database
+        internal static string LoadPlayer(string[] tokens)
+        {
+            try
+            {
+                Core.Player.Player.players.Add(new Core.Player.Player(tokens[0], tokens[1], tokens[2], tokens[3], int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6])));
+
+                return "Loaded";
+            }
+            catch (Exception ex)
+            {
+                return "Something Went Wrong!  ---  " + ex.Message;
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Engine.Create_Save_Load
 {
@@ -11,7 +12,7 @@ namespace Engine.Create_Save_Load
         // Add to player list in player class for now later will build from db or file
         public static void CreateNewPlayer()
         {
-            string name;
+            string name = "";
             string classType = "";
             string race = "";
             string password = "";
@@ -19,16 +20,40 @@ namespace Engine.Create_Save_Load
             bool stopClass = false;
             bool stopRace = false;
             bool stopPassword = false;
+            bool stopName = false;
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("What is your name?");
-            Console.Write(">> ");
-            name = Console.ReadLine();
-            Core.StandardMessages.BreakApartDisplay();
-            Console.ResetColor();
+            while (!stopName)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("What is your name? (Case Sensitive)");
+                Console.Write(">> ");
+                name = Console.ReadLine();
 
+                // name check to make sure name is unique
+                using (StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv"))
+                {
+                    reader.ReadLine();
 
-            while (stopClass == false)
+                    while (!reader.EndOfStream)
+                    {
+                        string[] tokens = reader.ReadLine().Split(',');
+
+                        if (tokens[0] == name)
+                        {
+                            Console.WriteLine("Name already taken!");
+                            continue;
+                        }
+                        else
+                        {
+                            stopName = true;
+                        }
+                    }
+                }
+                Core.StandardMessages.BreakApartDisplay();
+                Console.ResetColor();
+            }
+
+            while (!stopClass)
             {
                 Console.WriteLine("What class would you like to have?");
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -57,7 +82,7 @@ namespace Engine.Create_Save_Load
 
             }
 
-            while (stopRace == false)
+            while (!stopRace)
             {
                 Console.WriteLine("What race would you like to be?");
                 Console.ForegroundColor = ConsoleColor.Green;

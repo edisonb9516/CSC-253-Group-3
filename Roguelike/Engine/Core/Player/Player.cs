@@ -33,7 +33,16 @@ namespace Engine.Core.Player
             // will probably handle weapons and other equip / inventory items in a similar way as the location
         }
         // TODO new overloaded constructor that accepts Room Location as a parameter to build from a save
-
+        public Player(string name, string password, string classType, string race, int hp, int currentHP, int roomID)
+        {
+            Name = name;
+            Password = password;
+            Class = classType;
+            Race = race;
+            Hp = hp;
+            CurrentHP = currentHP;
+            CurrentRoom = Location.Room.rooms[roomID];
+        }
 
         // Holds player objects in list currently this will later be held in a database or document.
         public static List<Player> players = new List<Player>();
