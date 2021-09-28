@@ -9,6 +9,7 @@ namespace Engine.Create_Save_Load
 {
     public class DetermineNewPlayer
     {
+        // TODO Make UI insensitive i.e. Get rid of Console.Writelines
         public static void NewPlayer()
         {
             string input;

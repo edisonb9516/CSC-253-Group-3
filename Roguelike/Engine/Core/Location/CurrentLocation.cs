@@ -10,9 +10,10 @@ namespace Engine.Core.Location
     {
         public static void DisplayCurrentLocation()
         {
+            // TODO Make UI insensitive i.e. Get rid of Console.Writelines
+
             Console.WriteLine($"You are at: {Player.Player.CurrentRoom.Name}");
             Console.WriteLine(Player.Player.CurrentRoom.Description);
-            // TODO display other information about room other than name and description exits etc
 
             List<string> exits = FindExits(Player.Player.CurrentRoom);
 
@@ -27,6 +28,7 @@ namespace Engine.Core.Location
 
         private static List<string> FindExits(Room currentRoom)
         {
+            // this one is good on being UI insensitive
             List<string> exits = new List<string>();
 
             if (Player.Player.CurrentRoom.NorthExit >= 0)

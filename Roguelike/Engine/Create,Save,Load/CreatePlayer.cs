@@ -9,7 +9,7 @@ namespace Engine.Create_Save_Load
 {
     public class CreatePlayer
     {
-        // Add to player list in player class for now later will build from db or file
+        // TODO Make UI insensitive i.e. Get rid of Console.Writelines
         public static void CreateNewPlayer()
         {
             string name = "";

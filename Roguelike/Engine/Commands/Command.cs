@@ -8,6 +8,7 @@ namespace Engine.Commands
 {
     public class Command
     {
+        // TODO Make UI insensitive i.e. Get rid of Console.Writelines
         public static void CommandSelection(string input)
         {
             switch (input)

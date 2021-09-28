@@ -10,7 +10,7 @@ namespace Engine.Create_Save_Load
     {
         public static void Welcome()
         {
-            // TODO: ASCII art with game name
+            // TODO: ASCII art with game name, call a function that returns the art in a string, probably from StandardMessages.cs so we dont have ConsoleWriteline in the Engine/ClassLibrary
 
 
             DetermineNewPlayer.NewPlayer();

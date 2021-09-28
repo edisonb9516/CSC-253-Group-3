@@ -8,6 +8,7 @@ namespace Engine.Core
 {
     public class StandardMessages
     {
+        // TODO Make UI insensitive i.e. Get rid of Console.Writelines Make them all return strings instead of Writeline
         public static void ViewAfterChoice(string choice)
         {
             Console.WriteLine("");

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Engine.Commands
 {
-    public class Help
+    public static class Help
     {
+        // TODO Make UI insensitive i.e. Get rid of Console.Writelines
         public static void DisplayHelpInfo()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
