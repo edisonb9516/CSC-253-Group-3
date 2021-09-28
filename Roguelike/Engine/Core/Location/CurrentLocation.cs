@@ -16,12 +16,13 @@ namespace Engine.Core.Location
 
             List<string> exits = FindExits(Player.Player.CurrentRoom);
 
-            string showExits = "Exits -- ";
+            string showExits = "-- Exits --\n";
 
             foreach (string exit in exits)
             {
                 showExits += exit;
             }
+            Console.WriteLine(showExits);
         }
 
         private static List<string> FindExits(Room currentRoom)
@@ -30,19 +31,19 @@ namespace Engine.Core.Location
 
             if (Player.Player.CurrentRoom.NorthExit >= 0)
             {
-                exits.Add(" north: " + Room.rooms[Player.Player.CurrentRoom.NorthExit].Name);
+                exits.Add(" north: " + Room.rooms[Player.Player.CurrentRoom.NorthExit].Name + "\n");
             }
             if (Player.Player.CurrentRoom.SouthExit >= 0)
             {
-                exits.Add(" south: " + Room.rooms[Player.Player.CurrentRoom.SouthExit].Name);
+                exits.Add(" south: " + Room.rooms[Player.Player.CurrentRoom.SouthExit].Name + "\n");
             }
             if (Player.Player.CurrentRoom.EastExit >= 0)
             {
-                exits.Add(" east: " + Room.rooms[Player.Player.CurrentRoom.EastExit].Name);
+                exits.Add(" east: " + Room.rooms[Player.Player.CurrentRoom.EastExit].Name + "\n");
             }
             if (Player.Player.CurrentRoom.WestExit >= 0)
             {
-                exits.Add(" west: " + Room.rooms[Player.Player.CurrentRoom.WestExit].Name);
+                exits.Add(" west: " + Room.rooms[Player.Player.CurrentRoom.WestExit].Name + "\n");
             }
 
             return exits;

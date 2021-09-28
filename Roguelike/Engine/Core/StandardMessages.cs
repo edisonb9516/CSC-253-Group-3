@@ -33,7 +33,7 @@ namespace Engine.Core
             Console.WriteLine("5. Attack");
             Console.WriteLine("6. Exit");
             Console.WriteLine("________________________________________________________________________________________________________________________");
-            Console.Write("Enter a choice > ");
+            Console.Write("Enter a choice >> ");
         }
 
         public static void DisplayLocation()

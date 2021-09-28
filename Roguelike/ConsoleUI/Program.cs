@@ -22,10 +22,11 @@ namespace ConsoleUI
 
             // Welcome screen and player loading
             Engine.Create_Save_Load.Intoduction.Welcome();
-
+            // Display location once before moving all other location details will show when moving
+            Engine.Core.StandardMessages.DisplayLocation();
             // Main Menu
 
-            while(Engine.Commands.Command.exit == false)
+            while (Engine.Commands.Command.exit == false)
             {
                 Engine.Core.StandardMessages.DisplayMenu();
 
