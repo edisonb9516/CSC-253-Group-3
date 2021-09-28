@@ -20,7 +20,8 @@ namespace Engine.Core.Player
 
         public int Attack { get; set; }
         public static Location.Room CurrentRoom { get; set; }
-        // TODO add weapon this will be set to zero/null in new player constructor and saved and loaded as weaponID which will be used to generate the weapon object 
+        // TODO add weapon this will be set to zero/null in new player constructor and saved and loaded as weaponID which will be used to generate the weapon object
+        // Same with Inventory/Items
 
         // will require all properties so no base default constructor
         public Player(string name, string password, string classType, string race, int hp, int evasion, int attack)
