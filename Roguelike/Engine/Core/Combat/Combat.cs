@@ -9,7 +9,6 @@ namespace Engine.Core.Combat
 {
     public static class Combat
     {
-        // TODO combat logic to include Player attacking action and Mob attacking action
         // this will take into account player attack, player weapon attack, hp, and evasion as well as mob attack, hp, and evasion
         internal static void Fight(Mob enemy, Player.Player player)
         {

@@ -14,7 +14,6 @@ namespace Engine.Core
         {
             // Had to move mobs to top so the list builds first since rooms depend on the mobs list to add mobs
             #region Build Mobs
-            // TODO add more mobs to mobs.csv for a total of 15
             using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
             {
                 reader.ReadLine();
@@ -80,7 +79,6 @@ namespace Engine.Core
             #endregion
 
             #region Build Weapons
-            // TODO add more weapons to weapons.csv for a total of 12
             using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Weapons.csv"))
             {
                 reader.ReadLine();

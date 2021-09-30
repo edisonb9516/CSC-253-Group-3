@@ -71,10 +71,9 @@ namespace Engine.Commands
                 Core.Player.Player.CurrentRoom.RoomMobs.Add(new Core.NPC.Mob(Core.Player.Player.CurrentRoom.RoomMob));
             }
 
-            // TODO if player is in certain rooms heal IE bedroom
             if (Core.Player.Player.CurrentRoom == Room.rooms[2])
             {
-                // heal to full
+                // heal to full if in bedroom might add another place later
                 Core.Player.Player.players[0].CurrentHP = Core.Player.Player.players[0].Hp;
             }
         }

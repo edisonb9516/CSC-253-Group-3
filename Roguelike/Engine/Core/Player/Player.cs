@@ -64,8 +64,6 @@ namespace Engine.Core.Player
         }
 
         // Holds player objects in list currently this will later be held in a database or document.
-
-        // TODO maybe replace this list with a private Player _player object, this works fine now but it is unnecessary as there is never more than one object in the list; either a new player or loaded player.
         public static List<Player> players = new List<Player>();
 
     }
