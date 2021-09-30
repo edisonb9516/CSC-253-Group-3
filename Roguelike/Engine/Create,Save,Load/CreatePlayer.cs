@@ -66,17 +66,17 @@ namespace Engine.Create_Save_Load
 
                 if (classType == "warrior")
                 {
-                    attack = 20;
+                    attack = 15;
                     stopClass = true;
                 }
                 else if (classType == "rogue")
                 {
-                    attack = 15;
+                    attack = 10;
                     stopClass = true;
                 }
                 else if (classType == "wizard")
                 {
-                    attack = 10;
+                    attack = 5;
                     stopClass = true;
                 }
                 else

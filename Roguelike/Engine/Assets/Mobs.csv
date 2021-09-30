@@ -1,6 +1,6 @@
 ﻿ID,Name,Description,HP,Attack,Gold,Evasion
-301,Goblin,Small but nasty creature who attacks all travelers,80,10,10,10
-302,Orc,Big but slow enemy that hits hard,100,25,30,5
-303,Dark Elf,Not the good kind thats for sure. These elves have a high health pool and deal a normal amount of damage,150,15,45,25
-304,Mimic,Looks like a treasure chest but you definitely don't want what's inside. High attack low hp.,50,30,100,10
-305,Dragon,An ancient black dragon - huge and dangerous. We won't ask how he is related to the Dragonborn.,200,40,200,20
+300,Goblin,Small but nasty creature who attacks all travelers,80,10,10,10
+301,Orc,Big but slow enemy that hits hard,100,25,30,5
+302,Dark Elf,Not the good kind thats for sure. These elves have a high health pool and deal a normal amount of damage,150,15,45,25
+303,Mimic,Looks like a treasure chest but you definitely don't want what's inside. High attack low hp.,50,30,100,10
+304,Dragon,An ancient black dragon - huge and dangerous. We won't ask how he is related to the Dragonborn.,200,40,200,20

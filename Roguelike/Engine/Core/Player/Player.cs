@@ -17,7 +17,8 @@ namespace Engine.Core.Player
         public int Hp { get; set; }
         public int CurrentHP { get; set; }
         public int Evasion { get; set; }
-
+        public int Gold { get; set; }
+        public Items_Inventory.Weapon Weapon { get; set; }
         public int Attack { get; set; }
         public static Location.Room CurrentRoom { get; set; }
         // TODO add weapon this will be set to zero/null in new player constructor and saved and loaded as weaponID which will be used to generate the weapon object
@@ -38,8 +39,14 @@ namespace Engine.Core.Player
             // current location is first Room in rooms list when generated
             CurrentRoom = Location.Room.rooms[0];
             // will probably handle weapons and other equip / inventory items in a similar way as the location
+
+            // Since this constructor is only for new players you can set gold to zero
+            Gold = 0;
+
+            // TODO This always gives player daggers need to change later using this for combat now
+            this.Weapon = Items_Inventory.Weapon.weapons[2];
         }
-        public Player(string name, string password, string classType, string race, int hp, int currentHP, int roomID, int evasion, int attack)
+        public Player(string name, string password, string classType, string race, int hp, int currentHP, int roomID, int evasion, int attack, int gold)
         {
             Name = name;
             Password = password;
@@ -50,9 +57,15 @@ namespace Engine.Core.Player
             CurrentRoom = Location.Room.rooms[roomID];
             Evasion = evasion;
             Attack = attack;
+            Gold = gold;
+
+            // TODO This always gives player daggers need to change later using this for combat now
+            this.Weapon = Items_Inventory.Weapon.weapons[2];
         }
 
         // Holds player objects in list currently this will later be held in a database or document.
+
+        // TODO maybe replace this list with a private Player _player object, this works fine now but it is unnecessary as there is never more than one object in the list; either a new player or loaded player.
         public static List<Player> players = new List<Player>();
 
     }

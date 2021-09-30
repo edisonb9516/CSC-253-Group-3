@@ -62,9 +62,21 @@ namespace Engine.Commands
             }
         }
 
-        private static void MoveRooms(Room room)
+        public static void MoveRooms(Room room)
         {
             Core.Player.Player.CurrentRoom = room;
+
+            if (Core.Player.Player.CurrentRoom.RoomMob != null)
+            {
+                Core.Player.Player.CurrentRoom.RoomMobs.Add(new Core.NPC.Mob(Core.Player.Player.CurrentRoom.RoomMob));
+            }
+
+            // TODO if player is in certain rooms heal IE bedroom
+            if (Core.Player.Player.CurrentRoom == Room.rooms[2])
+            {
+                // heal to full
+                Core.Player.Player.players[0].CurrentHP = Core.Player.Player.players[0].Hp;
+            }
         }
     }
 }

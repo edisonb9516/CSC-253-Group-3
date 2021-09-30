@@ -28,6 +28,7 @@ namespace ConsoleUI
 
             while (Engine.Commands.Command.exit == false)
             {
+                // TODO autosave feature
                 Engine.Core.StandardMessages.DisplayMenu();
 
                 string input = Console.ReadLine();

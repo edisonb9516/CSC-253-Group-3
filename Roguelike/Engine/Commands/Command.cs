@@ -9,6 +9,8 @@ namespace Engine.Commands
     public class Command
     {
         // TODO Make UI insensitive i.e. Get rid of Console.Writelines
+        // TODO add option to see stats 
+        // TODO add option to interact with weapons and other items
         public static void CommandSelection(string input)
         {
             switch (input)
@@ -100,9 +102,7 @@ namespace Engine.Commands
                     }
                     break;
                 case "attack":
-                    // TODO  actual damage
-                    int damage = Attack.AttackDamage();
-                    Console.WriteLine($"Damage Dealt to enemy : {damage}");
+                    Console.WriteLine(Attack.AttackEnemy());
                     break;
                 case "help":
                     Help.DisplayHelpInfo();
@@ -114,6 +114,9 @@ namespace Engine.Commands
                     break;
                 case "location":
                     Core.StandardMessages.DisplayLocation();
+                    break;
+                case "gold":
+                    Console.WriteLine($"You have {Core.Player.Player.players[0].Gold} gold.");
                     break;
                 default:
                     Core.StandardMessages.ChoiceError();

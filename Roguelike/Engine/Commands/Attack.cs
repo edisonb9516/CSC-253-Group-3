@@ -8,14 +8,20 @@ namespace Engine.Commands
 {
     public class Attack
     {
-        // TODO actual combat
-        public static int AttackDamage()
+        internal static string AttackEnemy()
         {
-            int damage;
-            var rand = new Random();
-            damage = rand.Next(21);
+            if (Core.Player.Player.CurrentRoom.RoomMob == null)
+            {
+                return "There is no enemy here to attack!";
+            }
+            else
+            {
+                Core.NPC.Mob enemy = Core.Player.Player.CurrentRoom.RoomMobs[Core.Player.Player.CurrentRoom.RoomMobs.Count - 1];
 
-            return damage;
+                Core.Combat.Combat.Fight(enemy, Core.Player.Player.players[0]);
+
+                return "Done Fighting";
+            }
         }
     }
 }

@@ -12,22 +12,19 @@ namespace Engine.Core
 
         public static void Build()
         {
-
-            #region Build Rooms
-
-            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Rooms.csv"))
+            // Had to move mobs to top so the list builds first since rooms depend on the mobs list to add mobs
+            #region Build Mobs
+            // TODO add more mobs to mobs.csv for a total of 15
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
             {
                 reader.ReadLine();
-
                 while (!reader.EndOfStream)
                 {
                     string[] tokens = reader.ReadLine().Split(',');
 
-                    Location.Room.rooms.Add(new Location.Room(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]),
-                        int.Parse(tokens[6]), int.Parse(tokens[7]), int.Parse(tokens[8])));
+                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6])));
                 }
                 reader.Close();
-
             }
             #endregion
 
@@ -103,20 +100,24 @@ namespace Engine.Core
             //Items_Inventory.Weapon.weapons.Add(new Items_Inventory.Weapon(804, "Dragonslayer Bow", "Well crafted bow that keeps you farther away from combat", 25));        // evasion * 2
             #endregion
 
-            #region Build Mobs
-            // TODO add more mobs to mobs.csv for a total of 15
-            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
+            // Had to move rooms to the bottom to keep the same problem from happening like it did with mobs see top comment
+            #region Build Rooms
+
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Rooms.csv"))
             {
                 reader.ReadLine();
+
                 while (!reader.EndOfStream)
                 {
                     string[] tokens = reader.ReadLine().Split(',');
 
-                    NPC.Mob.mobs.Add(new NPC.Mob(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6])));
+                    Location.Room.rooms.Add(new Location.Room(int.Parse(tokens[0]), tokens[1], tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]),
+                        int.Parse(tokens[6]), int.Parse(tokens[7]), int.Parse(tokens[8])));
                 }
                 reader.Close();
+
             }
-                    #endregion
+            #endregion
         }
     }
 }

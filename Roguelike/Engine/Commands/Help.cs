@@ -29,6 +29,7 @@ namespace Engine.Commands
             Console.WriteLine("Enemies - Displays Enemies             ");
             Console.WriteLine("Treasure - Displays Treasure           ");
             Console.WriteLine("Location - Displays Current Location   ");
+            Console.WriteLine("Gold - Displays Current Amount of Gold ");
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;

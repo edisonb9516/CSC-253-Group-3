@@ -24,6 +24,15 @@ namespace Engine.Core.Location
                 showExits += exit;
             }
             Console.WriteLine(showExits);
+            Console.WriteLine("-- Enemy --");
+            if (Player.Player.CurrentRoom.RoomMob == null)
+            {
+                Console.WriteLine("No Enemies!");
+            }
+            else
+            {
+                Console.WriteLine(Player.Player.CurrentRoom.RoomMob.Name);
+            }
         }
 
         private static List<string> FindExits(Room currentRoom)

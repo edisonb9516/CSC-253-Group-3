@@ -11,7 +11,6 @@ namespace Engine.Core.Location
         // List of rooms
         public static List<Room> rooms = new List<Room>();
 
-        // TODO Replace monsterId with actual Mob Object then later save as ID instead. Same with Items this should be the actual object but saved and loaded by the ID
         public Room(int id, string name, string description, int northExit, int southExit, int eastExit, int westExit, int monsterId, int itemID)
         {
             Id = id;
@@ -23,6 +22,13 @@ namespace Engine.Core.Location
             WestExit = westExit;
             MonsterId = monsterId;
             ItemID = itemID;
+
+            if (MonsterId >= 0)
+            {
+                // TODO if we want add another if statement after a random object so that monster encounters are random
+                this.RoomMob = new NPC.Mob(NPC.Mob.mobs[monsterId - 300]);
+                this.RoomMobs.Add(new NPC.Mob(RoomMob));
+            }
         }
 
         public int Id { get; }
@@ -34,5 +40,8 @@ namespace Engine.Core.Location
         public int WestExit { get; }
         public int MonsterId { get; }
         public int ItemID { get; }
+        public NPC.Mob RoomMob { get; set; }
+
+        public List<NPC.Mob> RoomMobs = new List<NPC.Mob>();
     }
 }

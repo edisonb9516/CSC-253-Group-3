@@ -37,14 +37,14 @@ namespace Engine.Create_Save_Load
                     StreamWriter writer = File.AppendText(@"../../../Engine/Create,Save,Load/Players.csv");
 
                     writer.WriteLine($"{Core.Player.Player.players[0].Name},{Core.Player.Player.players[0].Password},{Core.Player.Player.players[0].Class},{Core.Player.Player.players[0].Race},{Core.Player.Player.players[0].Hp}" +
-                            $",{Core.Player.Player.players[0].CurrentHP},{Core.Player.Player.CurrentRoom.Id},{Core.Player.Player.players[0].Evasion},{Core.Player.Player.players[0].Attack}");
+                            $",{Core.Player.Player.players[0].CurrentHP},{Core.Player.Player.CurrentRoom.Id},{Core.Player.Player.players[0].Evasion},{Core.Player.Player.players[0].Attack},{Core.Player.Player.players[0].Gold}");
 
                     writer.Close();
                 }
                 if (overwriteSave)
                 {
                     LineChange($"{Core.Player.Player.players[0].Name},{Core.Player.Player.players[0].Password},{Core.Player.Player.players[0].Class},{Core.Player.Player.players[0].Race},{Core.Player.Player.players[0].Hp}" +
-                                $",{Core.Player.Player.players[0].CurrentHP},{Core.Player.Player.CurrentRoom.Id},{Core.Player.Player.players[0].Evasion},{Core.Player.Player.players[0].Attack}"
+                                $",{Core.Player.Player.players[0].CurrentHP},{Core.Player.Player.CurrentRoom.Id},{Core.Player.Player.players[0].Evasion},{Core.Player.Player.players[0].Attack},{Core.Player.Player.players[0].Gold}"
                                 ,@"../../../Engine/Create,Save,Load/Players.csv", index);
                 }
 
