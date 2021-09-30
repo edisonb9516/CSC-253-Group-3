@@ -1,6 +1,21 @@
 ﻿ID,NAME,DESCRIPTION,NORTH EXIT ID, SOUTH EXIT ID, EAST EXIT ID, WEST EXIT ID, MOB ID, ITEM ID
 0,Entrance,A dark room with only one way in or out to the north.,1,-1,-1,-1,-1,-1
-1,Hall,An empty hallway with a blockage ahead and doors on either side.,-1,0,2,3,300,-1
-2,Bedroom,A solitary room with a single bed in it - perhaps you would like a rest?,-1,-1,-1,1,-1,-1
-3,Armory,An empty armory where warriors used to receive their weapons. There is a trapdoor opening on the north end of the room.,4,-1,1,-1,300,-1
-4,Dungeon 1,You go down the trapdoor into what was the castle dungeon. There are blood stains on the floor.,-1,3,-1,-1,301,-1
+1,Hall,An empty hallway with a blockage ahead and doors on either side.,-1,0,2,3,308,-1
+2,Bedroom,A solitary room with a single bed in it - perhaps you would like a rest?,-1,5,-1,1,-1,-1
+3,Armory,An empty armory where warriors used to receive their weapons. There is a trapdoor opening on the north end of the room.,4,-1,1,6,300,-1
+4,Dungeon 1,You go down the trapdoor into what was the castle dungeon. There are blood stains on the floor.,7,3,-1,-1,301,-1
+5,Bathroom,There is a toilet in here! Reminds me of a certain player..,2,-1,-1,-1,-1,-1
+6,Secret Stash Room,There has got to be treasure in here!,-1,-1,3,-1,-1,-1
+7,Staircase,Stairs to heaven... Wow heaven isn't looking too good...,8,4,-1,-1,-1,-1
+8,Cavern,Looks a bit wet from the water dripping from the stalag.. pointy things,10,7,11,9,-1,-1
+9,Waterfall Rooms,I told you it was wet!,-1,-1,8,-1,-1,-1
+10,Cavern Upper Level,Look out for fly balls on the upper deck,-1,8,-1,-1,-1,-1
+11,Cavernous Hallway,I'm surprised that I fit,-1,-1,12,8,-1,-1
+12,Goblin Gang Hideout Entrance,This looks like a nice neighborhood,16,13,-1,11,300,-1
+13,Food Hall,Smells like fried chiken -- I should call Leeroy,12,-1,14,15,-1,-1
+14,Tavern,Goblin swill -- very good for digesiton,-1,-1,-1,13,-1,-1
+15,Kitchen,Goblins - now with cleavers!,-1,-1,13,-1,-1,-1
+16,Cavernous Hallway,I'm surprised that I fit two electic boogaloo,17,12,-1,-1
+17,Training Camp,Maybe try to avoid all the enemies here - Stealthy time!,18,16,-1,19,-1,-1
+18,Storage Room,Goblins are so nice - leaving their best weapons here for me and all,-1,17,-1,-1,-1,-1
+19,Goblin Gang Leader Throne Room,Thats a nice throne made of bones,-1,-1,17,-1,314,-1

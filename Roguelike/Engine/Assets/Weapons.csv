@@ -1,5 +1,13 @@
 ﻿ID,Name,Description,Attack,Price,Modifier?
-801,Broadsword,Normal sized sword with normal sized damage,30,50
-802,Claymore,Huge sword does a lot of damage,50,80
-803,Daggers,Small daggers lets you move faster while attacking,25,75
-804,Dragonslayer Bow,Well crafted bow that keeps you farther away from combat,25,125
+800,Broadsword,Normal sized sword with normal sized damage,30,50
+801,Claymore,Huge sword does a lot of damage,50,80
+802,Daggers,Small daggers lets you move faster while attacking,25,75
+803,Dragonslayer Bow,Well crafted bow that keeps you farther away from combat,25,125
+804,Flail,Good for flailing about,20,30
+805,Bow,Good for shooting arrows,15,40
+806,Club,Good for y'know -- clubbing,10,5
+807,Dragon-Tooth Daggers,Super Cool NGL,50,400
+808,Goblin's Whip,C'mon you don't want this,30,200
+809,Elven Short-Sword,Very Good and Stabby,60,400
+810,Orc Club,Heavy and hard to swing,45,100
+811,God Sword,Insta-Kill and Perma-Dodge,1000,10000

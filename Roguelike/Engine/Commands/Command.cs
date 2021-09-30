@@ -11,6 +11,7 @@ namespace Engine.Commands
         // TODO Make UI insensitive i.e. Get rid of Console.Writelines
         // TODO add option to see stats 
         // TODO add option to interact with weapons and other items
+        // TODO Add look option to show weapons, items, enemies, and enemy and room descriptions
         public static void CommandSelection(string input)
         {
             switch (input)

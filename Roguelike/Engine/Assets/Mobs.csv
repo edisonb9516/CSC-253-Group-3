@@ -3,4 +3,14 @@
 301,Orc,Big but slow enemy that hits hard,100,25,30,5
 302,Dark Elf,Not the good kind thats for sure. These elves have a high health pool and deal a normal amount of damage,150,15,45,25
 303,Mimic,Looks like a treasure chest but you definitely don't want what's inside. High attack low hp.,50,30,100,10
-304,Dragon,An ancient black dragon - huge and dangerous. We won't ask how he is related to the Dragonborn.,200,40,200,20
+304,Dragon,An ancient black dragon - huge and dangerous. We won't ask how he is related to the Dragonborn.,175,30,200,20
+305,Goblin - Knife Weilder,What do you have? A Knife! No!,80,15,10,10
+306,Goblin Group,Multiple Goblins!,160,20,20,10
+307,Goblin Slave,You dont really want to fight - Do you?,20,1,0,0
+308,Rat,Just a rat,1,1,0,0
+309,Giant Rat,A rat but y'know - Bigger!,35,5,0,10
+310,Goblin Chef,An upgrade from knife goblin - he has a cleaver!,80,25,30,10
+311,Goblin Lookout,He's weak but sneaky,20,5,20,70
+312,Goblin Trainer,Super mean to whip his trainees like that --  although one seems a little to happy..,100,30,80,20
+313,Goblin Trainee,Weak but has a heart of gold! As far as goblins are concerned anyway,60,8,5,5
+314,Goblin Gang Leader,He wears a crown,160,40,5000,30
