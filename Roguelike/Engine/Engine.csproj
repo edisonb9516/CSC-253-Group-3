@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Assets\EngineDatabase.db" />
     <None Include="Assets\Items.csv" />
     <None Include="Assets\Potions.csv" />
     <None Include="Assets\Treasure.csv" />

@@ -9,11 +9,11 @@ namespace Engine.Create_Save_Load
 {
     public static class Save
     {
-        // TODO save method to call when prompted by user and before the program closes. Saves to player.csv in the Create_Save_Load Folder
         public static string SavePlayer()
         {
             try
             {
+                // todo change to read from databse file and save to database file
                 StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv");
                 reader.ReadLine();
                 int index = 1;

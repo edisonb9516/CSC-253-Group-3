@@ -34,6 +34,7 @@ namespace Engine.Create_Save_Load
                         Console.Write(">> ");
                         name = Console.ReadLine();
 
+                        // todo change to read from database file
                         // name check to make sure name and password match
                         using (StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv"))
                         {

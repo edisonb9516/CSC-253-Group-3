@@ -12,6 +12,7 @@ namespace Engine.Core
 
         public static void Build()
         {
+            // todo change all of these to build from new database file
             // Had to move mobs to top so the list builds first since rooms depend on the mobs list to add mobs
             #region Build Mobs
             using (StreamReader reader = File.OpenText(@"../../../Engine/Assets/Mobs.csv"))
