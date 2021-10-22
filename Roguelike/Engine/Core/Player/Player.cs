@@ -8,7 +8,7 @@ namespace Engine.Core.Player
 {
     public class Player
     {
-        // Auto generated backing fields
+        // TODO inherit this class and Mob class from a Creature class to be made that uses all the properties that are same between the two. Think about giving Mobs actual weapons and Room ID for movement although this would make room generation have to be rethought
 
         public string Name { get; set; }
         public string Password { get; set; }
@@ -16,6 +16,7 @@ namespace Engine.Core.Player
         public string Race { get; set; }
         public int Hp { get; set; }
         public int CurrentHP { get; set; }
+        public int RoomId { get; set; }
         public int Evasion { get; set; }
         public int Gold { get; set; }
         public Items_Inventory.Weapon Weapon { get; set; }
@@ -24,6 +25,7 @@ namespace Engine.Core.Player
         // TODO add weapon this will be set to zero/null in new player constructor and saved and loaded as weaponID which will be used to generate the weapon object
         // Same with Inventory/Items
 
+        public static Player _player;
         // will require all properties so no base default constructor
         public Player(string name, string password, string classType, string race, int hp, int evasion, int attack)
         {
@@ -66,5 +68,10 @@ namespace Engine.Core.Player
         // Holds player objects in list currently this will later be held in a database or document.
         public static List<Player> players = new List<Player>();
 
+        public Player()
+        {
+            CurrentRoom = Location.Room.rooms[RoomId];
+            Weapon = Items_Inventory.Weapon.weapons[2];
+        }
     }
 }

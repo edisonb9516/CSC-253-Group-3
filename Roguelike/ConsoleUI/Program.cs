@@ -19,7 +19,6 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             Engine.Core.ListBuilder.Build();
-
             // Welcome screen and player loading
             Engine.Create_Save_Load.Intoduction.Welcome();
             // Display location once before moving all other location details will show when moving

@@ -140,7 +140,7 @@ namespace Engine.Create_Save_Load
                 }
 
             }
-            Core.Player.Player.players.Add(new Core.Player.Player(name, password, classType, race, hp, evasion, attack));
+            Core.Player.Player._player = new Core.Player.Player(name, password, classType, race, hp, evasion, attack);
         }
     }
 }

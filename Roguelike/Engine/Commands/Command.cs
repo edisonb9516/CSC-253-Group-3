@@ -117,7 +117,7 @@ namespace Engine.Commands
                     Core.StandardMessages.DisplayLocation();
                     break;
                 case "gold":
-                    Console.WriteLine($"You have {Core.Player.Player.players[0].Gold} gold.");
+                    Console.WriteLine($"You have {Core.Player.Player._player.Gold} gold.");
                     break;
                 default:
                     Core.StandardMessages.ChoiceError();

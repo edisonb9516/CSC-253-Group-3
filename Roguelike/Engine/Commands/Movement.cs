@@ -74,7 +74,7 @@ namespace Engine.Commands
             if (Core.Player.Player.CurrentRoom == Room.rooms[2])
             {
                 // heal to full if in bedroom might add another place later
-                Core.Player.Player.players[0].CurrentHP = Core.Player.Player.players[0].Hp;
+                Core.Player.Player._player.CurrentHP = Core.Player.Player._player.Hp;
             }
         }
     }

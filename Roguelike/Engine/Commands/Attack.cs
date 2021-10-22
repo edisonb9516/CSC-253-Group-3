@@ -18,7 +18,7 @@ namespace Engine.Commands
             {
                 Core.NPC.Mob enemy = Core.Player.Player.CurrentRoom.RoomMobs[Core.Player.Player.CurrentRoom.RoomMobs.Count - 1];
 
-                Core.Combat.Combat.Fight(enemy, Core.Player.Player.players[0]);
+                Core.Combat.Combat.Fight(enemy, Core.Player.Player._player);
 
                 return "Done Fighting";
             }

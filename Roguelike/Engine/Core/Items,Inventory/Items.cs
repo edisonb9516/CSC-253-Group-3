@@ -9,9 +9,10 @@ namespace Engine.Core.Items_Inventory
     public class Items
     {
         // List
+        // TODO make this the parent class for all other items in the game then make them inherit from this class
         public static List<Items> items = new List<Items>();
 
-        public Items(int id, string name, string description, int price, int quest)
+        public Items(int id, string name, string description, int price)
         {
             Id = id;
             Name = name;
@@ -23,6 +24,10 @@ namespace Engine.Core.Items_Inventory
         public string Name { get; }
         public string Description { get; }
         public int Price { get; }
-        public int Quest { get; }
+
+        public Items()
+        {
+
+        }
     }
 }

@@ -16,20 +16,81 @@ namespace Engine
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Core.Player.Player>("select * from Players", new DynamicParameters());
+                var output = cnn.Query<Core.Player.Player>("select Name Name, Password Password, Class Class, Race Race, HP Hp, CurrentHP CurrentHP, RoomID RoomId, Evasion Evasion, Attack Attack, Gold Gold from Players");
                 return output.ToList();
             }
         }
-        public static void SavePlayer(Core.Player.Player player)
+        public static void SavePlayer(Core.Player.Player player, string saveType)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                // search the player table for similar info before saving and overwrite if necessary
-                // todo sql statement in cnn.execute string pass to input the player save
-                cnn.Execute("", player);
+                if (saveType.Equals("new"))
+                {
+                    // todo sql statement in cnn.execute string pass to input the player save
+                    cnn.Execute("", player);
+                }
+                if (saveType.Equals("overwrite"))
+                {
+                    // todo sql statement in cnn.execute string pass to input the player save
+                    cnn.Execute("", player);
+                }
             }
         }
 
+        public static List<Core.Items_Inventory.Weapon> LoadWeapons()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Core.Items_Inventory.Weapon>("select ID Id, Name Name, Description Description, Attack Damage, Price Price, Type DamageType from Weapons");
+                return output.ToList();
+            }
+        }
+
+        public static List<Core.Location.Room> LoadRooms()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Core.Location.Room>("select ID Id, NAME Name, DESCRIPTION Description, NORTHEXITID NorthExit, SOUTHEXITID SouthExit, EASTEXITID EastExit, WESTEXITID WestExit, MOBID MonsterId, ITEMID ItemID from Rooms");
+                return output.ToList();
+            }
+        }
+
+        public static List<Core.NPC.Mob> LoadMobs()
+        {
+            // More specific SQL statement to build properly
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Core.NPC.Mob>("Select ID Id, Name Name, Description Description, HP Hp, Attack Damage, Gold Gold, Evasion Evasion FROM Mobs");
+                return output.ToList();
+            }
+        }
+
+        public static List<Core.Items_Inventory.Items> LoadItems()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Core.Items_Inventory.Items>("select ID Id, Name Name, Description Description, Price Price from Items");
+                return output.ToList();
+            }
+        }
+
+        public static List<Core.Items_Inventory.Potion> LoadPotions()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Core.Items_Inventory.Potion>("select ID Id, Name Name, Description Description, Value Value from Potions");
+                return output.ToList();
+            }
+        }
+
+        public static List<Core.Items_Inventory.Treasure> LoadTreasure()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Core.Items_Inventory.Treasure>("select ID Id, Name Name, Description Description, Quest Quest from Treasure");
+                return output.ToList();
+            }
+        }
         private static string LoadConnectionString(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;

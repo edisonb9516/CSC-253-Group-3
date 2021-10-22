@@ -19,8 +19,6 @@ namespace Engine.Core.NPC
             Damage = damage;
             Gold = gold;
             Evasion = evasion;
-            // set this to HP to start off then modify it in list or Room object
-            CurrentHP = hp;
         }
 
         // use this to generate mobs from already existing mobs in the refence list for battles
@@ -38,16 +36,19 @@ namespace Engine.Core.NPC
             CurrentHP = monster.Hp;
         }
 
-        public int Id { get; }
-        public string Name { get; }
-        public string Description { get; }
-        public int Hp { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Hp { get; set; }
         public int Damage { get; set; }
-        public int Gold { get; }
-        public int Evasion { get; }
+        public int Gold { get; set; }
+        public int Evasion { get; set; }
         public int CurrentHP { get; set; }
 
+        public Mob()
+        {
 
+        }
     }
 }
 

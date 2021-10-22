@@ -8,6 +8,7 @@ namespace Engine.Core.Items_Inventory
 {
     public class Treasure
     {
+        // TODO change value to Price
         // List
         public static List<Treasure> treasures = new List<Treasure>();
 
@@ -26,7 +27,6 @@ namespace Engine.Core.Items_Inventory
         public int Value { get; }
         public int Quest { get; }
 
-
         //public int Gold { get; set; }
         //public int Silver { get; set; }
         //public string SilverBroach { get; set; }
@@ -37,5 +37,10 @@ namespace Engine.Core.Items_Inventory
         //public int ManaRing { get; set; }
         //public int DamageRing { get; set; }
         //public int EvadeRing { get; set; }
+
+        public Treasure()
+        {
+
+        }
     }
 }

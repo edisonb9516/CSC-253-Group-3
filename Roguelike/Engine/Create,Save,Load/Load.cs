@@ -8,12 +8,12 @@ namespace Engine.Create_Save_Load
 {
     public static class Load
     {
-        internal static string LoadPlayer(string[] tokens)
+        internal static string LoadPlayer(Core.Player.Player player)
         {
             try
             {
-                Core.Player.Player.players.Add(new Core.Player.Player(tokens[0], tokens[1], tokens[2], tokens[3], int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]), int.Parse(tokens[7]), int.Parse(tokens[8]),
-                    int.Parse(tokens[9])));
+                Core.Player.Player.CurrentRoom = Core.Location.Room.rooms[player.RoomId];
+                Core.Player.Player._player = player;
 
                 return "Loaded";
             }

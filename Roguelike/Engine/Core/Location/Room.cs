@@ -26,8 +26,8 @@ namespace Engine.Core.Location
             if (MonsterId >= 0)
             {
                 // TODO if we want add another if statement after a random object so that monster encounters are random
-                this.RoomMob = new NPC.Mob(NPC.Mob.mobs[monsterId - 300]);
-                this.RoomMobs.Add(new NPC.Mob(RoomMob));
+                RoomMob = new NPC.Mob(NPC.Mob.mobs[monsterId - 300]);
+                RoomMobs.Add(new NPC.Mob(RoomMob));
             }
         }
 
@@ -43,5 +43,15 @@ namespace Engine.Core.Location
         public NPC.Mob RoomMob { get; set; }
 
         public List<NPC.Mob> RoomMobs = new List<NPC.Mob>();
+
+        public Room()
+        {
+            //if (MonsterId >= 300)
+            //{
+            //    TODO if we want add another if statement after a random object so that monster encounters are random
+            //    RoomMob = new NPC.Mob(NPC.Mob.mobs[MonsterId - 300]);
+            //    RoomMobs.Add(new NPC.Mob(RoomMob));
+            //}
+        }
     }
 }

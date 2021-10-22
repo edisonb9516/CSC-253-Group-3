@@ -9,6 +9,7 @@ namespace Engine.Core.Combat
 {
     public static class Combat
     {
+        // TODO change sentences to reflect type of damage when displaying e.g. blunt pierce slash. Use the _player.Weapon.DamageType to display
         // this will take into account player attack, player weapon attack, hp, and evasion as well as mob attack, hp, and evasion
         internal static void Fight(Mob enemy, Player.Player player)
         {

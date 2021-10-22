@@ -8,6 +8,7 @@ namespace Engine.Core.Items_Inventory
 {
     public class Potion
     {
+        // TODO Add price property
         // List
         public static List<Potion> potions = new List<Potion>();
 
@@ -28,5 +29,10 @@ namespace Engine.Core.Items_Inventory
         public string Name { get; }
         public string Description { get; }
         public int Value{ get; }
+
+        public Potion()
+        {
+
+        }
     }
 }

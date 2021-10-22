@@ -36,42 +36,72 @@ namespace Engine.Create_Save_Load
 
                         // todo change to read from database file
                         // name check to make sure name and password match
-                        using (StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv"))
+
+                        foreach (Core.Player.Player player in Core.Player.Player.players)
                         {
-                            reader.ReadLine();
-
-                            while (!reader.EndOfStream)
+                            if (player.Name.Equals(name))
                             {
-                                string[] tokens = reader.ReadLine().Split(',');
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("What is your Password?");
+                                Console.Write(">> ");
+                                string password = Console.ReadLine();
 
-                                if (tokens[0] == name)
+                                if (player.Password.Equals(password))
                                 {
-                                    string password;
-                                    Console.ForegroundColor = ConsoleColor.Green;
-                                    Console.WriteLine("What is your Password?");
-                                    Console.Write(">> ");
-                                    password = Console.ReadLine();
-                                    
-                                    if (tokens[1] == password)
-                                    {
-                                        Console.WriteLine(Load.LoadPlayer(tokens));
-                                        stopName = true;
-                                        stop = true;
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Incorrect Password!");
-                                        continue;
-                                    }
+                                    Console.WriteLine(Load.LoadPlayer(player));
+                                    stopName = true;
+                                    stop = true;
+                                    break;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Name not found!");
+                                    Console.WriteLine("Incorrect Password!");
                                     continue;
                                 }
                             }
+                            else
+                            {
+                                Console.WriteLine("Name not found!");
+                                continue;
+                            }
                         }
+
+                        //using (StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv"))
+                        //{
+                        //    reader.ReadLine();
+
+                        //    while (!reader.EndOfStream)
+                        //    {
+                        //        string[] tokens = reader.ReadLine().Split(',');
+
+                        //        if (tokens[0] == name)
+                        //        {
+                        //            string password;
+                        //            Console.ForegroundColor = ConsoleColor.Green;
+                        //            Console.WriteLine("What is your Password?");
+                        //            Console.Write(">> ");
+                        //            password = Console.ReadLine();
+                                    
+                        //            if (tokens[1] == password)
+                        //            {
+                        //                Console.WriteLine(Load.LoadPlayer(tokens));
+                        //                stopName = true;
+                        //                stop = true;
+                        //                break;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Incorrect Password!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        else
+                        //        {
+                        //            Console.WriteLine("Name not found!");
+                        //            continue;
+                        //        }
+                        //    }
+                        //}
                         Core.StandardMessages.BreakApartDisplay();
                         Console.ResetColor();
                     }
