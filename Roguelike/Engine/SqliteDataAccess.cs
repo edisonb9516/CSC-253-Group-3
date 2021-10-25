@@ -26,13 +26,11 @@ namespace Engine
             {
                 if (saveType.Equals("new"))
                 {
-                    // todo sql statement in cnn.execute string pass to input the player save
-                    cnn.Execute("", player);
+                    cnn.Execute($"INSERT INTO Players([Name],[Password],[Class],[Race],[HP],[CurrentHP],[RoomID],[Evasion],[Attack],[Gold]) VALUES (@Name, @Password, @Class, @Race, @HP, @CurrentHP, @RoomID, @Evasion, @Attack, @Gold)", player);
                 }
                 if (saveType.Equals("overwrite"))
                 {
-                    // todo sql statement in cnn.execute string pass to input the player save
-                    cnn.Execute("", player);
+                    cnn.Execute($"UPDATE Players SET CurrentHP = @CurrentHP, RoomID = @RoomID, Gold = @Gold WHERE Name = @Name", player);
                 }
             }
         }

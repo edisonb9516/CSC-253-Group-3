@@ -61,11 +61,15 @@ namespace Engine.Create_Save_Load
                             }
                             else
                             {
-                                Console.WriteLine("Name not found!");
                                 continue;
                             }
                         }
 
+                        // moved so that when looping through a player list this message isnt displayed when we check all players not with that name.
+                        if (!stopName)
+                        {
+                            Console.WriteLine("Name not found!");
+                        }
                         //using (StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv"))
                         //{
                         //    reader.ReadLine();

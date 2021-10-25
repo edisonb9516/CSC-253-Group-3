@@ -65,6 +65,7 @@ namespace Engine.Commands
         public static void MoveRooms(Room room)
         {
             Core.Player.Player.CurrentRoom = room;
+            Core.Player.Player._player.RoomId = Core.Player.Player.CurrentRoom.Id;
 
             if (Core.Player.Player.CurrentRoom.RoomMob != null)
             {

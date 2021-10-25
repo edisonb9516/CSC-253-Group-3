@@ -13,13 +13,13 @@ namespace Engine.Create_Save_Load
         {
             try
             {
-                // todo change to read from databse file and save to database file
                 //StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv");
                 //reader.ReadLine();
                 //int index = 1;
                 bool newSave = true;
                 bool overwriteSave = false;
 
+                //TODO fix bug where with db changes not being seen in db browser
                 foreach(Core.Player.Player player in Core.Player.Player.players)
                 {
                     if (player.Name.Equals(Core.Player.Player._player.Name))

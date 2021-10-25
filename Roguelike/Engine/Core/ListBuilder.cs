@@ -110,7 +110,7 @@ namespace Engine.Core
             // Had to move rooms to the bottom to keep the same problem from happening like it did with mobs see top comment
             #region Build Rooms
             Location.Room.rooms = SqliteDataAccess.LoadRooms();
-
+            // Had to do this outside of building since Dapper uses the default constructor
             foreach (Location.Room room in Location.Room.rooms)
             {
                 if (room.MonsterId >= 300)
@@ -139,7 +139,7 @@ namespace Engine.Core
 
             #region Build Player List
             Player.Player.players = SqliteDataAccess.LoadPlayers();
-
+            // Had to do this outside of building since Dapper uses the default constructor
             foreach (Player.Player player in Player.Player.players)
             {
                 // TODO change to saved weapon id or inventory something

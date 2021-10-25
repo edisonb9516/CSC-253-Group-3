@@ -46,12 +46,7 @@ namespace Engine.Core.Location
 
         public Room()
         {
-            //if (MonsterId >= 300)
-            //{
-            //    TODO if we want add another if statement after a random object so that monster encounters are random
-            //    RoomMob = new NPC.Mob(NPC.Mob.mobs[MonsterId - 300]);
-            //    RoomMobs.Add(new NPC.Mob(RoomMob));
-            //}
+
         }
     }
 }

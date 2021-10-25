@@ -70,8 +70,7 @@ namespace Engine.Core.Player
 
         public Player()
         {
-            CurrentRoom = Location.Room.rooms[RoomId];
-            Weapon = Items_Inventory.Weapon.weapons[2];
+
         }
     }
 }
