@@ -32,25 +32,18 @@ namespace Engine.Create_Save_Load
                 name = Console.ReadLine();
 
                 // name check to make sure name is unique
-                using (StreamReader reader = File.OpenText(@"../../../Engine/Create,Save,Load/Players.csv"))
-                {
-                    reader.ReadLine();
-
-                    while (!reader.EndOfStream)
-                    {
-                        string[] tokens = reader.ReadLine().Split(',');
-
-                        if (tokens[0] == name)
+                        
+                        if (name = )
                         {
                             Console.WriteLine("Name already taken!");
                             continue;
                         }
                         else
-                        {
+                {
                             stopName = true;
-                        }
-                    }
                 }
+                    
+                
                 Core.StandardMessages.BreakApartDisplay();
                 Console.ResetColor();
             }

@@ -10,13 +10,13 @@ namespace Engine.Core.NPC
     {
         public static List<Mob> mobs = new List<Mob>();
 
-        public Mob(int id, string name, string description, int hp, int damage, int gold, int evasion)
+        public Mob(int id, string name, string description, int hp, int attack, int gold, int evasion)
         {
             Id = id;
             Name = name;
             Description = description;
             Hp = hp;
-            Damage = damage;
+            Attack = attack;
             Gold = gold;
             Evasion = evasion;
         }
@@ -28,7 +28,7 @@ namespace Engine.Core.NPC
             this.Name = monster.Name;
             this.Description = monster.Description;
             this.Hp = monster.Hp;
-            this.Damage = monster.Damage;
+            this.Attack = monster.Attack;
             this.Gold = monster.Gold;
             this.Evasion = monster.Evasion;
 
@@ -40,7 +40,7 @@ namespace Engine.Core.NPC
         public string Name { get; set; }
         public string Description { get; set; }
         public int Hp { get; set; }
-        public int Damage { get; set; }
+        public int Attack { get; set; }
         public int Gold { get; set; }
         public int Evasion { get; set; }
         public int CurrentHP { get; set; }

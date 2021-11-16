@@ -39,7 +39,7 @@ namespace Engine
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Core.Items_Inventory.Weapon>("select ID Id, Name Name, Description Description, Attack Damage, Price Price, Type DamageType from Weapons");
+                var output = cnn.Query<Core.Items_Inventory.Weapon>("select ID Id, Name Name, Description Description, Attack Attack, Price Price, Type DamageType from Weapons");
                 return output.ToList();
             }
         }
