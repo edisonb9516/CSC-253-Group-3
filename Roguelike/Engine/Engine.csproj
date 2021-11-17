@@ -66,6 +66,7 @@
     <Compile Include="Core\Location\CurrentLocation.cs" />
     <Compile Include="Core\Location\Room.cs" />
     <Compile Include="Core\NPC\Mob.cs" />
+    <Compile Include="Core\ParentCharacterClass\ParentClassForCharacters.cs" />
     <Compile Include="Core\Player\Player.cs" />
     <Compile Include="Core\StandardMessages.cs" />
     <Compile Include="Create,Save,Load\CreatePlayer.cs" />
