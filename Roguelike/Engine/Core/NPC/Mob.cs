@@ -18,7 +18,7 @@ namespace Engine.Core.NPC
         }
 
         // use this to generate mobs from already existing mobs in the refence list for battles
-        public Mob(Mob monster, string name, int hp, int attack, int evasion, int gold) : base(name, hp, attack, evasion, gold)
+        public Mob(Mob monster) : base(monster.Name, monster.Hp, monster.Attack, monster.Evasion, monster.Gold)
         {
             this.Id = monster.Id;
             this.Name = monster.Name;
@@ -31,15 +31,15 @@ namespace Engine.Core.NPC
             // set this to HP to start off then modify it in list or Room object
             CurrentHP = monster.Hp;
         }
+        public Mob()
+        {
+
+        }
 
         public int Id { get; set; }
         public string Description { get; set; }
         public int CurrentHP { get; set; }
 
-        public Mob(string name, int hp, int attack, int evasion, int gold) : base(name, hp, attack, evasion, gold)
-        {
-
-        }
     }
 }
 

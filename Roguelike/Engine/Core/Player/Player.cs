@@ -19,7 +19,6 @@ namespace Engine.Core.Player
         public int CurrentHP { get; set; }
         public int RoomId { get; set; }
         public Items_Inventory.Weapon Weapon { get; set; }
-        public int Attack { get; set; }
         // todo player has inventory but it is not saved or used currently. when player gets an item copy the generated item in the room and add to inventory then delete item in room
         public Items_Inventory.IInventory Inventory { get; set; }
 
@@ -29,7 +28,7 @@ namespace Engine.Core.Player
 
         public static Player _player;
         // will require all properties so no base default constructor
-        public Player(string name, string password, string classType, string race, int hp, int evasion, int attack)
+        public Player(string name, string password, string classType, string race, int hp, int evasion, int attack, int gold) : base(name,hp,attack,evasion,gold)
         {
             Password = password;
             Class = classType;
@@ -67,7 +66,7 @@ namespace Engine.Core.Player
         // Holds player objects in list currently this will later be held in a database or document.
         public static List<Player> players = new List<Player>();
 
-        public Player(string name, int hp, int attack, int evasion, int gold) : base(name, hp, attack, evasion, gold)
+        public Player()
         {
 
         }

@@ -19,6 +19,11 @@ namespace Engine.Core.ParentCharacterClass
            
         }
 
+        public ParentClassForCharacters()
+        {
+
+        }
+
         public string Name { get; set; }
         public int Hp { get; set; }
         public int Attack { get; set; }
