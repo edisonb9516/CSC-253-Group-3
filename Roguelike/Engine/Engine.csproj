@@ -58,6 +58,7 @@
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Movement.cs" />
     <Compile Include="Core\Combat\Combat.cs" />
+    <Compile Include="Core\Items,Inventory\IInventory.cs" />
     <Compile Include="Core\Items,Inventory\Items.cs" />
     <Compile Include="Core\Items,Inventory\Potion.cs" />
     <Compile Include="Core\Items,Inventory\Treasure.cs" />

@@ -21,13 +21,16 @@ namespace Engine.Core.Player
         public int Gold { get; set; }
         public Items_Inventory.Weapon Weapon { get; set; }
         public int Attack { get; set; }
+        // todo player has inventory but it is not saved or used currently. when player gets an item copy the generated item in the room and add to inventory then delete item in room
+        public Items_Inventory.IInventory Inventory { get; set; }
+
         public static Location.Room CurrentRoom { get; set; }
         // TODO add weapon this will be set to zero/null in new player constructor and saved and loaded as weaponID which will be used to generate the weapon object
         // Same with Inventory/Items
 
         public static Player _player;
         // will require all properties so no base default constructor
-        public Player(string name, string password, string classType, string race, int hp, int evasion, int attack)
+        public Player(string name, string password, string classType, string race, int hp, int evasion, int attack, int gold)
         {
             Name = name;
             Password = password;
@@ -43,7 +46,7 @@ namespace Engine.Core.Player
             // will probably handle weapons and other equip / inventory items in a similar way as the location
 
             // Since this constructor is only for new players you can set gold to zero
-            Gold = 0;
+            Gold = gold;
 
             // TODO This always gives player daggers need to change later using this for combat now
             this.Weapon = Items_Inventory.Weapon.weapons[2];

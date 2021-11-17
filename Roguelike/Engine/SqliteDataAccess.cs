@@ -76,7 +76,7 @@ namespace Engine
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Core.Items_Inventory.Potion>("select ID Id, Name Name, Description Description, Value Value from Potions");
+                var output = cnn.Query<Core.Items_Inventory.Potion>("select ID Id, Name Name, Description Description, Value Value, Price Price from Potions");
                 return output.ToList();
             }
         }
@@ -85,7 +85,7 @@ namespace Engine
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Core.Items_Inventory.Treasure>("select ID Id, Name Name, Description Description, Quest Quest from Treasure");
+                var output = cnn.Query<Core.Items_Inventory.Treasure>("select ID Id, Name Name, Description Description, Price Price, Quest Quest from Treasure");
                 return output.ToList();
             }
         }

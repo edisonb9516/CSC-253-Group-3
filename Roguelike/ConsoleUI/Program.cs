@@ -18,6 +18,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            // TODO create delegate object to pass message strings to so we can make whole project UI Insensitive
             Engine.Core.ListBuilder.Build();
             // Welcome screen and player loading
             Engine.Create_Save_Load.Intoduction.Welcome();

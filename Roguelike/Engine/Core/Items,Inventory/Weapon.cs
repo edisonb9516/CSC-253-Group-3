@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Core.Items_Inventory
 {
-    public class Weapon
+    public class Weapon : IInventory
     {
         // List
         public static List<Weapon> weapons = new List<Weapon>();

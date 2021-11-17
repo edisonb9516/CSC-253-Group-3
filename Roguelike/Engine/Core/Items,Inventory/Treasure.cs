@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Engine.Core.Items_Inventory
 {
-    public class Treasure
+    public class Treasure : IInventory
     {
         // TODO change value to Price
         // List
         public static List<Treasure> treasures = new List<Treasure>();
 
-        public Treasure(int id, string name, string description, int value, int quest)
+        public Treasure(int id, string name, string description, int price, int quest)
         {
             Id = id;
             Name = name;
             Description = description;
-            Value = value;
+            Price = price;
             Quest = quest;
         }
 
-        public int Id { get; }
-        public string Name { get; }
-        public string Description { get; }
-        public int Value { get; }
-        public int Quest { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Price { get; set; }
+        public int Quest { get; set; }
 
         //public int Gold { get; set; }
         //public int Silver { get; set; }

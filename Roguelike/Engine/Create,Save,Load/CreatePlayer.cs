@@ -32,18 +32,19 @@ namespace Engine.Create_Save_Load
                 name = Console.ReadLine();
 
                 // name check to make sure name is unique
-                        
-                        if (name = )
-                        {
-                            Console.WriteLine("Name already taken!");
-                            continue;
-                        }
-                        else
+                foreach(Core.Player.Player player in Core.Player.Player.players)
                 {
-                            stopName = true;
-                }
-                    
-                
+                    if (name.Equals(player.Name))
+                    {
+                        Console.WriteLine("Name already taken!");
+                        continue;
+                    }
+                    else
+                    {
+                        stopName = true;
+                    }
+                }        
+
                 Core.StandardMessages.BreakApartDisplay();
                 Console.ResetColor();
             }
@@ -133,7 +134,7 @@ namespace Engine.Create_Save_Load
                 }
 
             }
-            Core.Player.Player._player = new Core.Player.Player(name, password, classType, race, hp, evasion, attack);
+            Core.Player.Player._player = new Core.Player.Player(name, password, classType, race, hp, evasion, attack, 0);
         }
     }
 }
