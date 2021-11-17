@@ -17,7 +17,7 @@ namespace Engine.Core.Combat
             while (player.CurrentHP > 0 && enemy.CurrentHP > 0)
             {
                 int playerDamage = player.Attack + player.Weapon.Damage + rand.Next(9) + 1;
-                int enemyDamage = enemy.Damage + rand.Next(9) + 1;
+                int enemyDamage = enemy.Attack + rand.Next(9) + 1;
 
                 Console.WriteLine($"You attack with {player.Weapon.Name} for : {playerDamage}");
 

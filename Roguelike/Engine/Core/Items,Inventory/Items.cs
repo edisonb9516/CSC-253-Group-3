@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Core.Items_Inventory
 {
-    public class Items
+    public class Items : IInventory
     {
         // List
         // TODO make this the parent class for all other items in the game then make them inherit from this class
@@ -20,10 +20,10 @@ namespace Engine.Core.Items_Inventory
             Price = price;
         }
 
-        public int Id { get; }
-        public string Name { get; }
-        public string Description { get; }
-        public int Price { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Price { get; set; }
 
         public Items()
         {
